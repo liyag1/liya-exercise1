@@ -20,4 +20,15 @@ add_one <- function(data) {
 modified_data <- add_one(mtcars)
 modified_data
 ```
+```{r}
+# Define a simple transformation function
+multiply_by_two <- function(data) {
+  data[] <- lapply(data, function(x) if(is.numeric(x)) x * 2 else x)
+  return(data)
+}
+
+# Use the function on the mtcars dataset
+modified_data <- multiply_by_two(mtcars)
+modified_data
+```
 
