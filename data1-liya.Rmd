@@ -22,9 +22,9 @@ modified_data
 ```
 ```{r}
 # Define a simple transformation function
-multiply_by_two <- function(data) {
-  data[] <- lapply(data, function(x) if(is.numeric(x)) x * 2 else x)
-  return(data)
+multiply_by_two <- function(data_new) {
+  data_new[] <- lapply(data_new, function(x) if(is.numeric(x)) x * 2 else x)
+  return(data_new)
 }
 
 # Use the function on the mtcars dataset
